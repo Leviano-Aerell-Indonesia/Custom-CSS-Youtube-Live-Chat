@@ -1,0 +1,983 @@
+@import url('https://fonts.cdnfonts.com/css/papernotes');
+
+/* ------------------------------------------------
+  フォントを変更する場合は、
+  Google Fontsから好きなフォントを選択してください。
+------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop:wght@400&family=Noto+Color+Emoji&family=Noto+Sans+SC:wght@400&family=Noto+Sans+TC:wght@400&family=Noto+Sans+KR:wght@400&family=Noto+Sans:wght@400&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Itim&family=Patrick+Hand&display=swap');
+
+
+/* ------------------------------------------------
+  ʕ •ﻌ• ʔ
+    ここで色の変更をできます！
+    ご要望のカラーコードを入れてください。
+------------------------------------------------- */
+
+:root {
+  --author-bg-color: #ffb3bd;             /*名前の背景色*/
+  --author-bg-color2: #abc8ff;             /*名前の背景色*/
+  --author-bg-color3: #fccd75;             /*名前の背景色*/
+
+  --author-border-color: #ffffff;
+
+  --author-box-shadow-color: #c47777;
+  --author-name-color :#ffffff;           /*名前の文字色*/
+
+  --normal-msg-bg-color: #dbedfd;         /*一般視聴者さんのメッセージの背景色*/
+  --normal-msg-bg-color2: #ffdfdf;         /*一般視聴者さんのメッセージの背景色*/
+  --normal-msg-bg-color3: #ffeed4;         /*一般視聴者さんのメッセージの背景色*/
+  
+  --normal-msg-font-color: rgb(104, 129, 209);       /*一般視聴者さんのメッセージの文字色*/
+  --normal-msg-font-color2: rgb(133, 90, 96);       /*一般視聴者さんのメッセージの文字色*/
+  --normal-msg-font-color3: rgb(216, 130, 96);       /*一般視聴者さんのメッセージの文字色*/
+
+  --normal-msg-boxshadow-color: #ffd9e8;         /*一般視聴者さんのメッセージの背景色*/
+  --normal-msg-boxshadow-color2: #d9eeff;         /*一般視聴者さんのメッセージの背景色*/
+  --normal-msg-boxshadow-color3: #f5bd23;         /*一般視聴者さんのメッセージの背景色*/
+
+  --normal-msg-border-color: #ffffff;
+  --normal-msg-outline-color: #684e4e;     /*一般視聴者さんのメッセージのボーダー色*/
+
+  --owner-msg-bg-color: #333333;          /*チャンネル管理者さんのメッセージの背景色*/
+  --owner-msg-font-color: #ffffff;        /*チャンネル管理者さんのメッセージの文字色*/
+  --owner-msg-border-color: rgb(255, 182, 46);      /*チャンネル管理者さんのメッセージのボーダー色*/
+
+  --moderator-msg-bg-color: #333333;      /*モデレーターさんのメッセージの背景色*/
+  --moderator-msg-font-color: rgb(104, 129, 209);    /*モデレーターさんのメッセージの文字色*/
+  --moderator-msg-border-color: rgb(255, 182, 46);  /*モデレーターさんのメッセージのボーダー色*/
+
+  --member-msg-bg-color: #333333;         /*メンバさんのメッセージの背景色*/
+  --member-msg-font-color: #ffffff;       /*メンバさんのメッセージの文字色*/
+  --member-msg-border-color: #B3C5F7;     /*メンバさんのメッセージのボーダー色*/
+
+  --mb-bg-color: #333333;                 /*Membership メンバシップメッセージの背景色*/
+  --mb-font-color: #ffffff;               /*Membership メンバシップメッセージの背景色*/
+  --mb-border-color: #B3C5F7;             /*Membership メンバシップメッセージの背景色*/
+
+  --sp-bg-color: #333333;                 /*スパチャ / スーパースティーカーの背景色*/
+  --sp-font-color: rgb(104, 129, 209);               /*スパチャの文字色*/
+
+  --sp-price-bg-color: #333333;           /*スパチャの金額の背景色*/
+  --sp-price-font-color: rgb(104, 129, 209);         /*スパチャの金額の文字色*/
+
+  --gift-bg-color: #333333;
+  --gift-font-color: rgb(104, 129, 209) ;
+
+  --yt-live-chat-paid-message-primary-color: rgba(29,233,182,1);
+  --sp-border-color: var(--yt-live-chat-paid-message-primary-color);
+}
+
+body{
+  /* background-color: black !important; */
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* ---------------------------------------------------- 
+  ʕ •ﻌ• ʔ Opt 1
+    Author names / Channel names
+    チャンネル名
+----------------------------------------------------*/
+
+yt-live-chat-text-message-renderer yt-live-chat-author-chip{
+  display: block !important;
+  text-align: center !important;
+  overflow: visible !important;
+  position: absolute !important;
+  top: -10px !important;
+  left: 0px !important;
+  z-index: 1000 !important;
+  width: calc(100%) !important;
+  height: calc(100% + 20px) !important;
+
+  /* display: none !important; */
+
+  /* border: 2px solid blue !important; */
+}
+
+ @keyframes zoom-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* left ice cream 1 */
+yt-live-chat-text-message-renderer yt-live-chat-author-chip::before{
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+
+  background-image: url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal5.png?raw=true");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform-origin: center center;
+  top: -20px;
+  left: -70px;
+  z-index: 10;
+
+  opacity: 0;
+  animation: zoom-in 0.3s forwards, bounce 1.5s linear infinite;
+  animation-delay: 0s, 0.9s;
+}
+
+yt-live-chat-text-message-renderer:nth-child(even) yt-live-chat-author-chip::before{
+  left: auto;
+  right: -82px;
+}
+
+/* left ice cream 2 */
+yt-live-chat-text-message-renderer yt-live-chat-author-chip::after{
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+
+  background-image: url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal6.png?raw=true");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform-origin: center center;
+  top: 35px;
+  left: -70px;
+  z-index: 10;
+
+  opacity: 0;
+  animation: zoom-in 0.3s forwards, pulse 1.5s linear infinite;
+  animation-delay: 0.3s, 0.6s;
+}
+
+yt-live-chat-text-message-renderer:nth-child(even) yt-live-chat-author-chip::after{
+  left: auto;
+  right: -82px;
+}
+
+/* Channel names - チャンネル名 */
+yt-live-chat-text-message-renderer #author-name {
+  /* display: none !important; */
+
+  color: var(--author-name-color) !important;
+  font-family: "Itim","Hachi Maru Pop", "Noto Color Emoji", sans-serif;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+
+  background-color: var(--author-bg-color) !important;
+  border: 4px solid var(--author-border-color) !important;
+  /* outline: 3px solid var(--normal-msg-bg-color) !important; */
+
+  border-radius: 60px !important;
+
+  position: absolute !important;
+  top: 10px !important;
+  left: 30px !important;
+
+  /* border: 2px solid blue !important; */
+
+  width: auto !important;
+  max-width: 300px !important;
+
+  padding: 3px 40px 5px 40px !important;
+  margin: 0 0 0 0 !important;
+
+  overflow:hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+
+  opacity: 0;
+  animation: fadeInUp 300ms forwards;
+  animation-delay: 200ms;
+
+  z-index: 10 !important;
+
+  letter-spacing: 2px !important;
+}
+
+yt-live-chat-text-message-renderer:nth-child(even) #author-name {
+  background-color: var(--author-bg-color2) !important;
+}
+
+/* チャンネル名の余白削除 */
+yt-live-chat-author-chip[is-highlighted] #author-name.yt-live-chat-author-chip,
+yt-live-chat-author-chip {
+  padding: 0px 0px;
+}
+
+/* Badges - 名前・バッジの色 */
+yt-live-chat-text-message-renderer #author-name[type="owner"],
+yt-live-chat-text-message-renderer #author-name.owner,
+yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="owner"] {
+  color: var(--author-name-color) !important;
+}
+
+yt-live-chat-text-message-renderer #author-name[type="moderator"],
+yt-live-chat-text-message-renderer #author-name.moderator,
+yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="moderator"] {
+  color: var(--author-name-color) !important;
+}
+
+yt-live-chat-text-message-renderer[author-type='member'] #author-name,
+yt-live-chat-text-message-renderer #author-name[type="member"],
+yt-live-chat-text-message-renderer #author-name.member,
+yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="member"] {
+  color: var(--author-name-color) !important;
+}
+
+yt-live-chat-text-message-renderer #chat-badges{
+  position: absolute !important;
+  overflow: visible !important;
+  top: -30px !important;
+  left: 30px !important;
+
+  display: none !important;
+
+  /* border: 2px solid blue; */
+}
+
+/* ---------------------------------------------------- 
+  ʕ •ﻌ• ʔ Opt 2
+    Messages (Viewers, Owner, Member, Moderator)
+    メッセージ「視聴者さん、チャンネル管理者、メンバさん、モデレーターさんのメッセージ含め」
+----------------------------------------------------*/
+
+/* Messages - チャット本文 */
+yt-live-chat-text-message-renderer {
+  position: relative;
+}
+
+/* 1 biscuit */
+yt-live-chat-text-message-renderer::before{
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 250px;
+  background-image: url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal4.png?raw=true");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: -110px;
+  left: 0px;
+
+  z-index: -1;
+}
+
+/* 2 biscuit */
+yt-live-chat-text-message-renderer:nth-child(3n+2):before{
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-image: url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal2.2.png?raw=true");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: -70px;
+  left: 200px;
+  animation: 1.5s bounce linear infinite;
+
+  z-index: 20;
+}
+
+/* 3 bowl */
+yt-live-chat-text-message-renderer:nth-child(3n+3):before{
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 200px;
+  background-image: 
+  url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal3.3.png?raw=true");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  top: -70px;
+  left: auto;
+  right: -20px;
+
+  animation: none;
+
+  z-index: -1;
+}
+
+yt-live-chat-text-message-renderer::after{
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images013/footstepright2.png?raw=true");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: -80px;
+  left: 420px;
+  z-index: -1;
+  opacity: 0;
+
+  animation: fadeInZoomInRotate4 300ms ease-in-out forwards;
+
+  animation-delay: 900ms;
+}
+
+yt-live-chat-text-message-renderer #message,
+yt-live-chat-text-message-renderer #message * {
+  color: var(--normal-msg-font-color) !important;
+  font-family: "Itim","Hachi Maru Pop", "Noto Color Emoji", sans-serif !important;
+  font-size: 26px !important;
+  line-height: 26px !important;
+  font-weight: 600 !important;
+  padding: 14px 55px 18px 25px !important;
+  text-align: center !important;
+  overflow: visible !important;
+}
+
+yt-live-chat-text-message-renderer:nth-child(even) #message,
+yt-live-chat-text-message-renderer:nth-child(even) #message * {
+  color: var(--normal-msg-font-color2) !important;
+}
+
+yt-live-chat-text-message-renderer #message {
+  display: block !important;
+  position: relative !important;
+
+  width: 100% !important;
+  min-width: 250px !important;
+  letter-spacing: 3px !important;
+  
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+
+ }
+
+ /* message background */
+ yt-live-chat-text-message-renderer #message::before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  border-radius: 60px !important;
+
+  background:
+  url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/pattern_plaid-pattern-3_1_3_0-0_140_2__ffffff_f0f7ff_c2eaff3.png?raw=true"), 
+  var(--normal-msg-bg-color) !important;
+
+  background-size: 300px auto, contain !important;
+  background-repeat: no-repeat !important;
+  background-position-x: calc(100% + 10px), 0px !important;
+  background-position-y: calc(0% - 40px), 0px !important;
+
+  border: 10px solid var(--normal-msg-border-color) !important;
+  outline: 6px solid var(--normal-msg-outline-color) !important;
+  box-shadow: 0px 20px 0px var(--normal-msg-boxshadow-color) !important;
+
+  z-index: -1;
+  opacity: 0.8;
+ }
+
+ yt-live-chat-text-message-renderer:nth-child(even) #message::before{
+  background:
+  url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/pattern_plaid-pattern-3_1_3_0-0_140_2__ffffff_f0f7ff_c2eaff2.png?raw=true"), 
+  var(--normal-msg-bg-color2) !important;
+
+  background-size: 300px auto, contain !important;
+  background-repeat: no-repeat !important;
+  background-position-x: calc(0% - 10px), 0px !important;
+  background-position-y: calc(0% - 40px), 0px !important;
+
+  border: 10px solid var(--normal-msg-border-color) !important;
+  outline: 6px solid var(--normal-msg-outline-color) !important;
+  box-shadow: 0px 20px 0px var(--normal-msg-boxshadow-color2) !important;
+
+ }
+
+ /* 1 right rabbit */
+ yt-live-chat-text-message-renderer #message::after{
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 120px;
+  background: 
+  url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal1.png?raw=true");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: -90px;
+  right: 0px;
+  animation: 1.5s pulse linear infinite;
+
+  z-index: 20;
+ }
+
+ /* 2 left cat */
+ yt-live-chat-text-message-renderer:nth-child(3n+2) #message::after{
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 120px;
+  background-image: url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal2.1.png?raw=true");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: -105px;
+  right: auto;
+  left: 0px;
+
+  animation: 1.5s headShake linear infinite;
+  animation-delay: 300ms;
+
+  z-index: 20;
+ }
+
+  /* 3 cat */
+  yt-live-chat-text-message-renderer:nth-child(3n+3) #message::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 60px;
+    background-image: 
+    url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal3.1.png?raw=true"),
+    url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal3.2.png?raw=true");
+
+    background-repeat: no-repeat;
+    background-position-x: 0px, calc(150px);
+    background-size: contain;
+    top: -50px;
+    right: auto;
+    left: 45px;
+  
+    animation: 1.5s headShake linear infinite;
+    animation-delay: 600ms;
+  
+    z-index: 20;
+   }
+
+/* left ice cream 3 */
+yt-live-chat-text-message-renderer #content::before{
+  position: absolute;
+  content: "";
+  width: 57px;
+  height: 57px;
+
+  background-image: url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal7.png?raw=true");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform-origin: center center;
+  top: 82px;
+  left: -70px;
+  z-index: 10;
+
+  opacity: 0;
+  animation: zoom-in 0.3s forwards, pulse 1.5s linear infinite;
+  animation-delay: 0.6s, 0.9s;
+}
+
+yt-live-chat-text-message-renderer:nth-child(even) #content::before{
+  left: auto;
+  right: -80px;
+}
+
+/* 1 cream */
+yt-live-chat-text-message-renderer #content::after{
+  position: absolute;
+  content: "";
+  width: calc(100% + 60px);
+  height: calc(100%);
+  background-image: url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal3.png?raw=true"),
+  url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal8.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: auto 80px, auto 80px;
+  background-position-x: 0px, calc(100% - 0px);
+  background-position-y: calc(100%);
+
+  top: 40px;
+  left: -15px;
+
+  z-index: 1;
+}
+
+/* 2 cream */
+yt-live-chat-text-message-renderer:nth-child(3n+2) #content::after{
+  position: absolute;
+  content: "";
+  width: calc(100% + 60px);
+  height: calc(100% + 60px);
+  background-image: 
+  url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal2.3.png?raw=true"),
+  url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal2.4.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: auto 70px, auto 110px;
+  background-position-x: 0px, calc(100% - 0px);
+  background-position-y: calc(100%);
+
+  top: -10px;
+  left: -15px;
+
+  z-index: 1;
+}
+
+/* 3 cream */
+yt-live-chat-text-message-renderer:nth-child(3n+3) #content::after{
+  position: absolute;
+  content: "";
+  width: calc(100% + 60px);
+  height: calc(100% + 60px);
+  background-image: 
+  url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal3.5.png?raw=true"),
+  url("https://github.com/teriterry/selfUseOnlyCssUseImages/blob/main/images014/normal3.4.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: auto 70px, auto 80px;
+  background-position-x: 20px, calc(100% - 0px);
+  background-position-y: calc(100%), calc(100% - 10px);
+
+  top: 0px;
+  left: -15px;
+
+  z-index: 1;
+}
+
+yt-live-chat-text-message-renderer #content {
+  display: flex !important;
+  position: relative !important;
+  width: 100% !important;
+
+  margin: 0px 0px 0px 0px !important;
+  padding: 0px 0px 0px 0px !important;
+
+  /* border: 3px solid blue !important; */
+}
+
+yt-live-chat-text-message-renderer #message{
+  /* border: 4px solid red !important; */
+  
+  width: 100% !important;
+  margin: 0px 0px 0px 0px !important;
+  padding: 50px 60px 10px 60px !important;
+}
+
+yt-live-chat-text-message-renderer{
+  /* display: block !important; */
+  /* border: 3px solid rgb(44, 44, 15) !important; */
+  padding: 0px 0px 0px 0px !important;
+
+}
+
+yt-live-chat-renderer{
+  display: block !important;
+}
+
+#author-name-chip.yt-live-chat-paid-sticker-renderer {
+  padding-right: 0px;
+}
+
+/* スティッカーの名前の高さ */
+div#author-name.yt-live-chat-paid-sticker-renderer,
+span#price-column {
+  
+  line-height: unset !important;
+}
+
+/* 風船 */
+#overlay-image.yt-live-chat-paid-message-renderer {
+  right: 20px;
+  opacity: 0.3;
+}
+
+yt-live-chat-text-message-renderer a,
+yt-live-chat-membership-item-renderer a {
+  text-decoration: none !important;
+}
+
+/* 削除/管理されたメッセージは非表示 */
+yt-live-chat-text-message-renderer[is-deleted],
+yt-live-chat-membership-item-renderer[is-deleted],
+yt-live-chat-moderation-message-renderer,
+yt-live-chat-auto-mod-message-renderer {
+  display: none !important;
+}
+
+yt-live-chat-ticker-renderer {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+yt-live-chat-ticker-renderer {
+  display: none !important;
+}
+
+yt-live-chat-ticker-paid-message-item-renderer,
+yt-live-chat-ticker-paid-message-item-renderer *,
+yt-live-chat-ticker-sponsor-item-renderer,
+yt-live-chat-ticker-sponsor-item-renderer * {
+  /* ; /* 2行目の色 */
+  font-family: "Itim","Hachi Maru Pop", "Noto Color Emoji", sans-serif;
+  font-size: 14px !important;
+  line-height: 1.5em !important;
+  font-weight: 500 !important;
+}
+
+yt-live-chat-mode-change-message-renderer,
+yt-live-chat-viewer-engagement-message-renderer,
+yt-live-chat-server-error-message,
+yt-live-chat-banner-manager,
+yt-live-chat-restricted-participation-renderer {
+  display: none !important;
+}
+
+/* アニメーションの設定 */
+@keyframes myanim {
+  0% { opacity: 0;  transform: translateX(-100px) ; }
+  100% { opacity: 1; transform: translateX(0px) ;}
+  }
+
+  @keyframes myanim2 {
+    0% { opacity: 0;  transform: translateX(100px) ; }
+    100% { opacity: 1; transform: translateX(0px) ;}
+    }
+
+@keyframes pop-out {
+ 0% {
+   transform: translateX(-50%) translateY(-50%) scale(0);
+   opacity: 0;
+ }
+
+ 100% {
+   transform: translateX(0%) translateY(0) scale(1);
+   opacity: 1;
+ }
+}
+
+yt-live-chat-author-chip[disable-highlighting] #author-name.yt-live-chat-author-chip {
+  color: var(--author-name-color) !important;
+  animation: none;
+}
+
+
+yt-live-chat-text-message-renderer,
+yt-live-chat-paid-message-renderer,
+yt-live-chat-paid-sticker-renderer,
+yt-live-chat-membership-item-renderer {
+  animation: fadeInUp 200ms !important;
+  animation-fill-mode: both !important;
+}
+
+/* チャット欄をすごく小さくした時に表示を崩れないようにする */
+yt-live-chat-app {
+  min-height: 0px;
+  min-width: 0px;
+  word-break: break-all;
+}
+
+/* 余白調整とかいろいろ */
+div#author-info {
+  align-items: center !important;
+  padding: 8px 16px !important;
+  max-height: unset !important;
+}
+
+/* ログイン中にチャット本文内の自分の名前に色がつくのを無効化 */
+.mention.style-scope {
+  background-color: unset;
+}
+
+/* ポップアップしている要素を消す */
+yt-live-chat-upsell-dialog-renderer {
+  display: none;
+}
+
+/* リアクション（ハートマークが飛ぶやつ）を消す */
+div#reaction-control-panel-overlay.yt-live-chat-renderer {
+  display: none !important;
+}
+
+/* セパレータ(薄い影)を消す */
+div#separator.yt-live-chat-renderer {
+  display: none !important;
+}
+
+div#menu.yt-live-chat-paid-message-renderer{
+  display: none !important;
+}
+
+div#gradient-container.yt-live-chat-paid-message-renderer{
+  display: none !important;
+}
+
+div#creator-heart-button.yt-live-chat-paid-message-renderer{
+  display: none !important;
+}
+
+div#footer.yt-live-chat-paid-message-renderer{
+  display: none !important;
+}
+
+div#action-buttons.yt-live-chat-paid-message-renderer{
+  display: none !important;
+}
+
+/* Background colors - 背景色 */
+body {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Transparent background - 背景透過 */
+yt-live-chat-renderer {
+  visibility: hidden !important;
+}
+
+yt-live-chat-renderer * {
+  visibility: initial !important;
+}
+
+yt-live-chat-text-message-renderer,
+yt-live-chat-text-message-renderer[is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="owner"],
+yt-live-chat-text-message-renderer[author-type="owner"][is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="moderator"],
+yt-live-chat-text-message-renderer[author-type="moderator"][is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="member"],
+yt-live-chat-text-message-renderer[author-type="member"][is-highlighted] {
+  background-color: transparent !important;
+}
+
+/* Outlines - 縁取り */
+yt-live-chat-text-message-renderer * {
+  font-family: "Itim","Hachi Maru Pop", "Noto Color Emoji", sans-serif;
+  font-size: 14px !important;
+  line-height: 1.5em !important;
+}
+
+yt-live-chat-text-message-renderer #content,
+yt-live-chat-membership-message-renderer #content {
+  overflow: initial !important;
+}
+
+/* Hide scrollbar - スクロールバー非表示 */
+yt-live-chat-item-list-renderer #items {
+  overflow: hidden !important;
+}
+
+yt-live-chat-item-list-renderer #item-scroller {
+  overflow: hidden !important;
+}
+
+/* Hide header and input - ヘッダーと入力欄非表示 */
+#panel-pages,
+yt-live-chat-message-input-renderer {
+  display: none !important;
+}
+
+yt-live-chat-header-renderer {
+  display: none !important;
+}
+
+yt-live-chat-membership-item-renderer,
+yt-live-chat-paid-sticker-renderer,
+yt-live-chat-paid-message-renderer {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+/* ---------------------------------------------------- 
+ icon-img 
+----------------------------------------------------*/
+
+ytd-sponsorships-live-chat-header-renderer #author-photo.ytd-sponsorships-live-chat-header-renderer,ytd-sponsorships-live-chat-gift-redemption-announcement-renderer #author-photo {
+  display: none !important;
+}
+
+/* 通常のチャット */
+yt-img-shadow#author-photo.yt-live-chat-text-message-renderer,
+yt-img-shadow#author-photo.yt-live-chat-text-message-renderer img {
+  /* display: none !important; */
+  display: block !important;
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+yt-live-chat-text-message-renderer #author-photo img{
+  height: 0px !important;
+  display: none !important;
+}
+
+/* メンバーシップ・スーパーチャット */
+#author-photo.yt-live-chat-membership-item-renderer img#img,
+#author-photo.yt-live-chat-paid-message-renderer img#img,
+yt-img-shadow#author-photo.yt-live-chat-membership-item-renderer,
+yt-img-shadow#author-photo.yt-live-chat-membership-item-renderer img,
+yt-img-shadow#author-photo.yt-live-chat-paid-sticker-renderer,
+yt-img-shadow#author-photo.yt-live-chat-paid-sticker-renderer img,
+yt-img-shadow#author-photo.yt-live-chat-paid-message-renderer,
+yt-img-shadow#author-photo.yt-live-chat-paid-message-renderer img {
+  display: none !important;
+}
+
+/* Member Badge - モデレーター・メンバーのバッジ(アイコン)サイズ */
+.yt-live-chat-author-badge-renderer,
+.yt-live-chat-author-badge-renderer img {
+  width: 22px !important;
+  height: 22px !important;
+  display: block !important;
+  /* border: 2px solid blue !important; */
+}
+
+/* Hide badges - バッジ非表示. */
+/* yt-live-chat-text-message-renderer #author-badges, */
+/* yt-live-chat-text-message-renderer #chat-badges, */
+yt-live-chat-membership-item-renderer #chat-badges,
+yt-live-chat-paid-sticker-renderer #chat-badges,
+yt-live-chat-paid-message-renderer #chat-badges {
+  display: none !important;
+}
+
+/* Emoji - 絵文字・メンバー用スタンプ */
+#message>img,
+img.yt-live-chat-text-message-renderer {
+  width: 35px !important;
+  height: 35px !important;
+  margin: 0 !important;
+  padding: 0px 5px 0px 0px !important;
+}
+
+/* Timestamps - 時刻表示 */
+yt-live-chat-text-message-renderer #timestamp,
+yt-live-chat-paid-sticker-renderer #timestamp {
+  display: none !important;
+}
+
+/* Disable Gift */
+ytd-sponsorships-live-chat-gift-purchase-announcement-renderer,
+ytd-sponsorships-live-chat-gift-redemption-announcement-renderer {
+    display: none !important;
+}
+
+ytd-sponsorships-live-chat-gift-redemption-announcement-renderer {
+  display: none !important;
+}
+
+/* yt-live-chat-membership-item-renderer[show-only-header]{
+  display: none !important;
+} */
+
+/* Disable membership */
+yt-live-chat-membership-item-renderer
+{
+  display: none !important;
+}
+
+/* Disable superchat */
+yt-live-chat-paid-sticker-renderer,
+yt-live-chat-paid-message-renderer{
+  display: none !important;
+}
+
+/* yt-live-chat-text-message-renderer {
+  display: none !important;
+} */
+
+yt-live-chat-text-message-renderer,
+ytd-sponsorships-live-chat-gift-redemption-announcement-renderer,
+ytd-sponsorships-live-chat-gift-purchase-announcement-renderer,
+yt-live-chat-membership-item-renderer,
+yt-live-chat-paid-sticker-renderer,
+yt-live-chat-paid-message-renderer
+{
+  overflow: visible !important;
+  contain: none !important;
+}
+
+yt-live-chat-membership-item-renderer,
+yt-live-chat-legacy-paid-message-renderer,
+yt-live-chat-paid-message-renderer,
+yt-live-chat-paid-sticker-renderer[show-only-header],
+yt-live-chat-paid-sticker-renderer,
+ytd-sponsorships-live-chat-gift-purchase-announcement-renderer,
+ytd-sponsorships-live-chat-gift-redemption-announcement-renderer,
+yt-live-chat-membership-item-renderer #card,
+yt-live-chat-legacy-paid-message-renderer #card,
+yt-live-chat-paid-message-renderer #card,
+yt-live-chat-paid-sticker-renderer #card,
+yt-live-chat-paid-sticker-renderer[show-only-header] #card,
+yt-live-chat-paid-sticker-renderer[show-only-header] #header,
+ytd-sponsorships-live-chat-gift-purchase-announcement-renderer #header,
+ytd-sponsorships-live-chat-gift-redemption-announcement-renderer #header{
+  box-shadow: none !important;
+}
+
+#menu{
+  display: none !important;
+}
+
+yt-live-chat-paid-message-renderer{
+  margin: 60px 90px 30px 80px !important;
+}
+
+yt-live-chat-text-message-renderer{
+  margin: 100px 90px 60px 60px !important;
+
+  /* border: 2px solid red !important; */
+}
+
+yt-live-chat-text-message-renderer:nth-child(1){
+  margin-top: 100px !important;
+}
+
+yt-live-chat-membership-item-renderer{
+  margin: 50px 90px 15px 80px !important;
+}
+
+/* yt-live-chat-membership-item-renderer[show-only-header]{
+  margin-top: 200px !important;
+} */
+
+yt-live-chat-paid-sticker-renderer{
+  margin: 60px 90px 30px 80px !important;
+}
+
+ytd-sponsorships-live-chat-gift-purchase-announcement-renderer
+{
+  margin: 100px 90px 30px 150px !important;
+}
+
+ytd-sponsorships-live-chat-gift-redemption-announcement-renderer
+{
+  margin: 110px 90px 30px 80px !important;
+}
