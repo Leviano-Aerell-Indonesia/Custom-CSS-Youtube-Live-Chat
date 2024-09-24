@@ -1,19 +1,10 @@
 /* Font */
-@import url('https://fonts.cdnfonts.com/css/fredoka-one');
-
-:root {
-    --color-black: #4a4647;
-    --color-pink: #fed0ec;
-    --color-white: #ffffff;
-    --color-softblue: #a8c6fc;
-    --color-blue: #5d8fd3;
-}
-
+@import url('https://fonts.cdnfonts.com/css/papernotes');
 
 body {
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0);
-    font-family: 'Fredoka One', sans-serif;
+    font-family: 'Papernotes', sans-serif;
 }
 
 /* Transparent background. */
@@ -107,46 +98,38 @@ yt-live-chat-text-message-renderer #timestamp {
 yt-live-chat-text-message-renderer #author-name[type="owner"],
 yt-live-chat-text-message-renderer #author-name.owner,
 yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="owner"] {
-    color: var(--color-black) !important;
+    /* color: #ffd600 !important; */
+    color: #ffffff !important;
 }
 
 yt-live-chat-text-message-renderer #author-name[type="moderator"],
 yt-live-chat-text-message-renderer #author-name.moderator,
 yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="moderator"] {
-    color: var(--color-black) !important;
-}
-
-yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="moderator"]::after {
-    content: '';
-    position: absolute;
-    background-image: url('https://raw.githubusercontent.com/Leviano-Aerell-Indonesia/Assets/main/icons/ghost2.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100px;
-    height: 100px;
-    top: -32px;
-    right: -80px;
+    /* color: #5e84f1 !important; */
+    color: #ffffff !important;
 }
 
 yt-live-chat-text-message-renderer #author-name[type="member"],
 yt-live-chat-text-message-renderer #author-name.member,
 yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="member"] {
-    color: var(--color-black) !important;
+    /* color: #0f9d58 !important; */
+    color: #ffffff !important;
 }
 
 yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="member"]::after {
     content: '';
+    background-image: url('https://raw.githubusercontent.com/Leviano-Aerell-Indonesia/Assets/refs/heads/main/icons/triangle.png');
     position: absolute;
-    background-image: url('https://raw.githubusercontent.com/Leviano-Aerell-Indonesia/Assets/main/icons/ghost1.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100px;
-    height: 100px;
-    top: -32px;
-    right: -80px;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    right: -30px;
+    filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 1.0));
 }
+
 /* Chat Content */
 yt-live-chat-text-message-renderer #content {
     display: flex !important;
@@ -162,23 +145,20 @@ yt-live-chat-author-chip {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    background-color: var(--color-pink) !important;
-    border: 5px solid var(--color-black) !important;
-    padding: 15px 25px !important;
-    transform: translateX(45px) translateY(72px);
+    background-color: #35b8f0 !important;
+    border: 5px solid #434856 !important;
+    padding: 5px 5px !important;
+    transform: translateX(10px) translateY(40px) rotate(-3deg);
     width: fit-content !important;
-    max-width: 300px !important;
-    border-radius: 15px !important;
 }
 
 yt-live-chat-author-chip #author-name {
     font-size: 25px !important;
     line-height: 25px !important;
     font-weight: bold !important;
-    color: var(--color-black) !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
+    color: #ffffff !important;
+    border: 2px dashed #ffffff !important;
+    padding: 10px 35px !important;
 }
 
 /* Varified Icon */
@@ -199,28 +179,25 @@ yt-live-chat-text-message-renderer #before-content-buttons {
 yt-live-chat-text-message-renderer #message {
     position: relative;
     z-index: 1;
-    background-color: var(--color-softblue) !important;
-    padding: 70px 30px 20px 30px !important;
+    background-color: #f7fbfd !important;
+    padding: 35px 20px 10px 20px !important;
     margin: 0px !important;
-    border: 5px solid var(--color-white) !important;
-    outline: 5px solid var(--color-black) !important;
+    border: 5px solid #434856 !important;
     transform: translateY(-10px) translateX(25px);
-    min-width: calc(100% + 10px) !important;
     max-width: 400px !important;
+    min-width: 100px !important;
     text-shadow: 0px 0px 2px rgba(0,0,0,0.6) !important;
-    border-radius: 25px !important;
-    filter: drop-shadow(7px 7px 0px rgba(254, 208, 236, 0.8));
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
 }
+
 yt-live-chat-text-message-renderer #message,
 yt-live-chat-text-message-renderer #message * {
-    color: var(--color-black) !important;
+    color: #434856 !important;
     font-size: 25px !important;
     line-height: normal !important;
     letter-spacing: normal !important;
     text-shadow: 0px 0px 2px rgba(0,0,0,0.6) !important;
 }
+
 /* SuperChat/Fan Funding Messages. */
 yt-live-chat-paid-message-renderer #author-name,
 yt-live-chat-paid-message-renderer #author-name *,
@@ -315,7 +292,6 @@ yt-live-chat-viewer-engagement-message-renderer {
 
 /* Join Membership */
 yt-live-chat-membership-item-renderer {
-    display: none !important;
     max-width: 400px !important;
     min-width: 100px !important;
     margin-top: 20px !important;
@@ -327,14 +303,14 @@ yt-live-chat-membership-item-renderer #author-photo {
 }
 
 yt-live-chat-membership-item-renderer #card {
-    background-color: #9e81de !important;
-    border: 5px solid #e6dafe !important;
+    background-color: #35b8f0 !important;
+    border: 5px solid #434856 !important;
     padding: 5px 5px !important;
 }
 
 yt-live-chat-membership-item-renderer #card::after {
     content: '';
-    background-image: url('https://raw.githubusercontent.com/Leviano-Aerell-Indonesia/Assets/main/icons/bell.png');
+    background-image: url('https://raw.githubusercontent.com/Leviano-Aerell-Indonesia/Assets/refs/heads/main/icons/triangle.png');
     position: absolute;
     background-size: contain;
     background-position: center;
@@ -346,7 +322,7 @@ yt-live-chat-membership-item-renderer #card::after {
 }
 
 yt-live-chat-membership-item-renderer #header {
-    background-color: #9e81de !important;
+    background-color: #35b8f0 !important;
     color: #ffffff !important;
     border: 2px dashed #ffffff !important;
     padding: 10px 35px !important;
@@ -380,20 +356,19 @@ yt-live-chat-membership-item-renderer #header-subtext {
 
 /* Menghadiahi membership */
 ytd-sponsorships-live-chat-header-renderer #header {
-    display: none !important;
     margin-top: 20px !important;
     transform: translateX(-10px) translateY(10px);
-    background-color: #9e81de !important;
-    border: 5px solid #e6dafe !important;
+    background-color: #35b8f0 !important;
+    border: 5px solid #434856 !important;
     padding: 5px 5px !important;
     max-width: 400px !important;
     min-width: 100px !important;
     overflow: visible !important;
 }
 
-/* ytd-sponsorships-live-chat-header-renderer #header::after {
+ytd-sponsorships-live-chat-header-renderer #header::after {
     content: '';
-    background-image: url('https://raw.githubusercontent.com/Leviano-Aerell-Indonesia/Assets/main/icons/bell.png');
+    background-image: url('https://raw.githubusercontent.com/Leviano-Aerell-Indonesia/Assets/refs/heads/main/icons/triangle.png');
     position: absolute;
     background-size: contain;
     background-position: center;
@@ -402,11 +377,11 @@ ytd-sponsorships-live-chat-header-renderer #header {
     height: 50px;
     top: -15px;
     right: -20px;
-} */
+}
 
 ytd-sponsorships-live-chat-header-renderer #content {
     width: 100% !important;
-    background-color: #9e81de !important;
+    background-color: #35b8f0 !important;
     color: #ffffff !important;
     border: 2px dashed #ffffff !important;
     padding: 10px 35px !important;
@@ -443,7 +418,7 @@ ytd-sponsorships-live-chat-header-renderer yt-live-chat-author-chip #author-name
 
 /* SuperChat */
 yt-live-chat-paid-message-renderer {
-    transform: none !important;
+    display: none !important;
     transform: translateX(-10px) translateY(10px);
     margin-top: 10px !important;
     margin-bottom: 10px !important;
@@ -482,7 +457,7 @@ yt-live-chat-paid-message-renderer #author-name {
 yt-live-chat-paid-message-renderer #header {
     position: relative;
     background-color: #f8ba12 !important;
-    border: 5px solid #e6dafe !important;
+    border: 5px solid #434856 !important;
     padding: 5px 5px !important;
     border-radius: 5px !important;
     overflow: visible !important;
@@ -537,10 +512,10 @@ yt-live-chat-paid-message-renderer #action-buttons {
 }
 
 yt-live-chat-paid-message-renderer #content {
-    background-color: #cfb7ff !important;
+    background-color: #f7fbfd !important;
     margin: 0px !important;
     padding: 20px 20px 20px 20px !important;
-    border: 5px solid #e6dafe !important;
+    border: 5px solid #434856 !important;
     color: #ffffff !important;
     font-size: 25px !important;
     line-height: normal !important;
